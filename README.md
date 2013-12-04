@@ -30,12 +30,13 @@ However, Fedora15 or later work. maybe.
 when you try to build on el5, must enable the EPEL repository.
 
     $ sudo rpm -ivh http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm
-    $ sudo yum install -y rpm-build rpmdevtools openssl-devel zlib-devel python26 gcc gcc-c++ make libstdc++-devel
+    $ sudo yum install -y rpm-build rpmdevtools openssl-devel zlib-devel gcc gcc-c++ make libstdc++-devel
     $ mkdir ~/rpmbuild
     $ cd ~/rpmbuild
     $ rpmdev-setuptree
 
-    $ cd /path/to/nodejs-rpm # git dir
+    $ git clone https://github.com/chrisconley/nodejs-rpm.git /tmp/nodejs-rpm
+    $ cd /tmp/nodejs-rpm
     $ ./build.sh
     $ cd ~/rpmbuild/RPMS/x86_64/
     $ sudo yum install ./nodejs-X.X.X-X.x86_64.rpm ./nodejs-npm-X.X.X-X.x86_64.rpm --nogpgcheck
