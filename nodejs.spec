@@ -148,6 +148,8 @@ rm -rf $RPM_SOURCE_DIR/%{_base}-v%{version}-linux-%{_node_arch}
 /usr/share/man/man7
 
 %changelog
+* Thu Dec  4 2013 Chris Conley <cconley@monetate.com>
+- Change node configure patch to python2.7
 * Thu Nov 14 2013 Kazuhisa Hara <kazuhisya@gmail.com>
 - Updated to node.js version 0.10.22
 * Mon Oct 28 2013 Kazuhisa Hara <kazuhisya@gmail.com>
